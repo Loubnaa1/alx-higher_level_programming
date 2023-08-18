@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def replace_elements(my_list, search, replace):
+def search_replace(my_list, search, replace):
     result = []
     for i in my_list:
         if i == search:
