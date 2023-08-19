@@ -13,4 +13,3 @@ def weight_average(my_list=[]):
 
     weighted_average = numerateur / denominateur
     return weighted_average
-
