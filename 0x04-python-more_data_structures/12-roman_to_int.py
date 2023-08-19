@@ -17,9 +17,3 @@ def roman_to_int(roman_string):
         index -= 1
 
     return total
-
-# Example usage
-roman_numeral = "IX"
-result = roman_to_int(roman_numeral)
-print(f"The integer value of {roman_numeral} is {result}")
-
