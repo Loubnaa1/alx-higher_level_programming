@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    numerator = 0
-    denominator = 0
+    numerateur = 0
+    denominateur = 0
 
     for x in my_list:
         produit = x[0] * x[1]
