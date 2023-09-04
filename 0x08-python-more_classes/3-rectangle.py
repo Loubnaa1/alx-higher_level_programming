@@ -53,11 +53,13 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
     def __str__(self):
         """Convert a rectangle object into a string"""
+        rect = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rectang = []
-        for i in range(self.__height):
-            rectang.extend(['#'] * self.__width)
-            if i != self.__height - 1:
-                rectang.append("\n")
-        return ("".join(rectang))
+            return rect
+        else:
+            for i in range(self.__height):
+                if i < self.__height - 1:
+                    rect += "#" * self.__width + "\n"
+                else:
+                    rect += "#" * self.__width
+            return rect
