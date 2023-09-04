@@ -70,7 +70,8 @@ class Rectangle:
     def __repr__(self):
         """ returning a string representation of the rectangle"""
 
-        return f"Rectangle({self.__width}, {self.__height})"    
+        return f"Rectangle({self.__width}, {self.__height})"
     def __del__(self):
-        """Print a message for every deletion of a Rectangle."""
-        print("Bye rectangle...")
+        """ called when object is destroyed"""
+
+        print("Bye reclangle...")
