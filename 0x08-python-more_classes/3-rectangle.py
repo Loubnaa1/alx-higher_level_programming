@@ -64,6 +64,5 @@ class Rectangle:
             for i in range(self.__height):
                 if i < self.__height - 1:
                     rect += "#" * self.__width + "\n"
-                
-                rect += "#" * self.__width
+            rect += "#" * self.__width
             return rect
