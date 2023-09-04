@@ -6,7 +6,7 @@ class Rectangle:
     """Rectangle class"""
 
     def __init__(self, width=0, height=0):
-        """ initialization"""
+        """ initialization """
 
         self.width = width
         self.height = height
@@ -46,20 +46,16 @@ class Rectangle:
         """returning the rectangle area """
 
         return self.__width * self.__height
+
     def perimeter(self):
         """ returning the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * (self.__width + self.__height))
     def __str__(self):
-        """Convert a rectangle object into a string"""
-        rect = ""
+        """Converting a rectangle object into a string"""
         if self.__width == 0 or self.__height == 0:
-            return rect
+            return ("")
         else:
-            for i in range(self.__height):
-                if i < self.__height - 1:
-                    rect += "#" * self.__width + "\n"
-                else:
-                    rect += "#" * self.__width
-            return rect
+            rectangle_lines = ["#" * self.__width for _ in range(self.__height)]
+            return ("\n".join(rectangle_lines))
