@@ -56,6 +56,10 @@ class Rectangle:
         """Converting a rectangle object into a string"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        else:
-            rectangle_lines = ["#" * self.__width for i in range(self.__height)]
-            return ("\n".join(rectangle_lines))
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
