@@ -55,5 +55,5 @@ class Rectangle:
         """Converting a rectangle object into a string"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        rectangle_lines = ["#" * self.__width for _ in range(self.__height)]
+        rectangle_lines = ["#" * self.__width for i in range(self.__height)]
         return "\n".join(rectangle_lines)
