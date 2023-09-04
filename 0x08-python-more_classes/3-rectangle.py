@@ -57,4 +57,4 @@ class Rectangle:
             return ("")
         else:
             rectangle_lines = ["#" * self.__width for _ in range(self.__height)]
-        return ("\n".join(rectangle_lines))
+        return "\n".join(rectangle_lines)
