@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Class defining a rectangle"""
+""" This module contain a class that defines a rectangle"""
 
 
 class Rectangle:
-    """Rectangle class"""
+    """ class called Rectangle has been created"""
 
     def __init__(self, width=0, height=0):
-        """ initialization """
+        """ initializing the data """
 
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """ returning the width of the rectangle """
+        """ retreiving the width of the rectangle """
 
         return self.__width
 
@@ -21,7 +21,7 @@ class Rectangle:
     def width(self, value):
         """ setting a value to the width """
 
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -29,48 +29,54 @@ class Rectangle:
 
     @property
     def height(self):
-        """ returning the height of the rectangle """
+        """ retreiving the height of the rectangle """
         return self.__height
 
     @height.setter
     def height(self, value):
         """ setting a value to the width """
 
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-        """returning the rectangle area """
+        """method that returns the rectangle area """
 
         return self.__width * self.__height
 
     def perimeter(self):
-        """ returning the rectangle perimeter"""
+        """ method that returns the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (2 * (self.__width + self.__height))
+        p = 2 * (self.__width + self.__height)
+        return p
 
     def __str__(self):
         """
-        convert a rectangle object into string
+        special method that convert a rectangle object into
+        string
         """
-        rect = ""
+        string = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
+            return string
         else:
             for i in range(self.__height):
                 if i < self.__height - 1:
-                    rect += "#" * self.__width + "\n"
-            rect += "#" * self.__width
-            return rect
+                    string += "#" * self.__width + "\n"
+                else:
+                    string += "#" * self.__width
+            return string
 
     def __repr__(self):
-        """ returning a string representation of the rectangle"""
+        """ special method that return a string
+        representation of the rectangle
+        """
 
         return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
         """ special method is called when an object is destroyed"""
 
