@@ -52,8 +52,13 @@ class Rectangle:
             return 0
         return (2 * (self.__width + self.__height))
     def __str__(self):
-        """Converting a rectangle object into a string"""
+        """Convert a rectangle object into a string"""
         if self.__width == 0 or self.__height == 0:
-            return ("")
-        rectangle_lines = ["#" * self.__width for i in range(self.__height)]
-        return "\n".join(rectangle_lines)
+            return ""
+
+        rectang = []
+        for i in range(self.__height):
+            rectang.extend(['#'] * self.__width)
+            if i != self.__height - 1:
+                rectang.append("\n")        
+        return "".join(rectang)
