@@ -57,6 +57,7 @@ class Rectangle:
         """
         convert a rectangle object into string
         """
+        rect = ""
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
