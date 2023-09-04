@@ -57,13 +57,13 @@ class Rectangle:
         """
         convert a rectangle object into string
         """
-        string = ""
+        rect = ""
         if self.__width == 0 or self.__height == 0:
-            return string
+            return ""
         else:
             for i in range(self.__height):
                 if i < self.__height - 1:
-                    string += "#" * self.__width + "\n"
-                else:
-                    string += "#" * self.__width
-            return string
+                    rect += "#" * self.__width + "\n"
+                
+                rect += "#" * self.__width
+            return rect
