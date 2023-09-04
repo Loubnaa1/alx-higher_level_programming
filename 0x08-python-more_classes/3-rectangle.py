@@ -55,8 +55,7 @@ class Rectangle:
 
     def __str__(self):
         """
-        special method that convert a rectangle object into
-        string
+        convert a rectangle object into string
         """
         string = ""
         if self.__width == 0 or self.__height == 0:
