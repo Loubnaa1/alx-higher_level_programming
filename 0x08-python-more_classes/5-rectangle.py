@@ -71,8 +71,7 @@ class Rectangle:
         """ returning a string representation of the rectangle"""
 
         return f"Rectangle({self.__width}, {self.__height})"
-     
+    
     def __del__(self):
-        """ called when an object is destroyed"""
-
+        """Print a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
