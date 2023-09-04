@@ -58,7 +58,7 @@ class Rectangle:
 
         rectang = []
         for i in range(self.__height):
-            rectang.append(['#'] * self.__width)
+            rectang.extend(['#'] * self.__width)
             if i != self.__height - 1:
                 rectang.append("\n")
         return "".join(rectang)
