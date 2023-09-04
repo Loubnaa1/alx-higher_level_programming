@@ -72,6 +72,6 @@ class Rectangle:
 
         return f"Rectangle({self.__width}, {self.__height})"
     def __del__(self):
-        """ called when object is destroyed"""
+        """ special method is called when an object is destroyed"""
 
-        print("Bye reclangle...")
+        print("Bye rectangle...")
