@@ -66,13 +66,13 @@ class Rectangle:
                     rect += "#" * self.__width + "\n"
             rect += "#" * self.__width
             return rect
-    
+
     def __repr__(self):
         """ returning a string representation of the rectangle"""
 
         return f"Rectangle({self.__width}, {self.__height})"
-    
+     
     def __del__(self):
-        """ used when an object is destroyed"""
-        
+        """ called when an object is destroyed"""
+
         print("Bye rectangle...")
