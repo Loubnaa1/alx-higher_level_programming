@@ -9,7 +9,7 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """ initializing the data """
+        """ initialization """
 
         self.width = width
         self.height = height
@@ -67,9 +67,10 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 if i < self.__height - 1:
-                    rect += "#" * self.__width + "\n"
-            rect += "#" * self.__width
+                    rect += str(self.print_symbol) * self.__width + "\n"
+            rect += str(self.print_symbol) * self.__width
             return rect
+
     def __repr__(self):
         """ returning a string representation of the rectangle"""
 
