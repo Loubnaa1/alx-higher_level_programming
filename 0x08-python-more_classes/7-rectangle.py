@@ -6,7 +6,6 @@ class Rectangle:
     """Rectangle class"""
 
     number_of_instances = 0
-    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ initialization """
@@ -58,12 +57,18 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
-        """Converting a rectangle object into a string"""
+        """
+        convert a rectangle object into string
+        """
+        rect = ""
         if self.__width == 0 or self.__height == 0:
-            return ("")
+            return ""
         else:
-            rectangle_lines = ["#" * self.__width for _ in range(self.__height)]
-            return ("\n".join(rectangle_lines))
+            for i in range(self.__height):
+                if i < self.__height - 1:
+                    rect += "#" * self.__width + "\n"
+            rect += "#" * self.__width
+            return rect
 
     def __repr__(self):
         """ returning a string representation of the rectangle"""
@@ -75,4 +80,3 @@ class Rectangle:
 
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-l
