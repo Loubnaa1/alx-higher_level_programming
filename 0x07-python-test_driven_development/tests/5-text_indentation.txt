@@ -1,0 +1,26 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(2)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("loubna \n is good student.")
+loubna 
+is good student.
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("I hope you are fine! I am fine:\nI hope you too.")
+I hope you are fine! I am fine:
+<BLANKLINE>
+<BLANKLINE>
+I hope you too.
+<BLANKLINE>
+
+>>> text_indentation("\n\n Hi everyone.")
+<BLANKLINE>
+<BLANKLINE>
+Hi everyone.
+<BLANKLINE>

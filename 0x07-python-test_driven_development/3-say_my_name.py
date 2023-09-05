@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""function that prints a name"""
+"""containing a function that prints a name"""
 
 
 def say_my_name(first_name, last_name=""):
