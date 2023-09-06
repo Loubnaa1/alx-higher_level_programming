@@ -1,0 +1,8 @@
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+>>> m_a = [
+... [3, 2],
+... [5, 4],
+... ]
+>>> m_b = m_a
+>>> print(lazy_matrix_mul(m_a, m_b))
+[[ 19 18][27 26]]
