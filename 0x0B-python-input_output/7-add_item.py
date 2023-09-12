@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""contains a script that adds all arguments to a 
+"""contains a script that adds all arguments to a
 Python list,and save them to a file:"""
 import sys
 
@@ -12,5 +12,6 @@ if __name__ == "__main__":
         list = load_from_json_file("add_item.json")
     except FileNotFoundError:
         list = []
-    list.extend(sys.argv[1:])
+    for j in sys.argv[1:]:
+        list.append(j)
     save_to_json_file(list, "add_item.json")
