@@ -3,14 +3,15 @@
 
 
 def pascal_triangle(n):
-    """pascal triangle function"""
+    """ pascal triangle function """
+
     if n <= 0:
         return []
-    list_n = [[1]]
+    list_1 = [[1]]
     for i in range(n-1):
-        triangle_l = [1]
+        list_2 = [1]
         for j in range(i):
-            triangle_l.append(list_n[-1][j] + list_n[1][j+1])
-        triangle_l.append(1)
-        list_n.append(triangle_l)
-    return list_n
+            list_2.append(list_1[-1][j] + list_1[-1][j+1])
+        list_2.append(1)
+        list_1.append(list_2)
+    return list_1
