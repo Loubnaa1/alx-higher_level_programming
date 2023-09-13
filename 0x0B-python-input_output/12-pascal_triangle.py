@@ -10,7 +10,7 @@ def pascal_triangle(n):
     for i in range(n-1):
         triangle = [1]
         for j in range(i):
-            triangle.append(list[i-1][j-1] + list[i-1][j])
+            triangle.append(list[-1][j] + list[1][j+1])
         triangle.append(1)
         list.append(triangle)
     return list
