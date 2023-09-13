@@ -19,5 +19,5 @@ class Student:
         new_dic = {}
         for attrs in attr:
             if attrs in self.__dict__:
-                new_dic = getattr(self, attrs)
+                new_dic.update({attrs: self.__dict__[attrs]})
         return new_dic
