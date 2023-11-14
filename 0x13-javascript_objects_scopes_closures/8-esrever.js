@@ -2,7 +2,7 @@
 exports.esrever = function (list) {
   let len = list.length - 1;
   let n = 0;
-  while (len > 0 && len > i) {
+  while (len > 0 && len > n) {
     const num = list[len];
     list[len] = list[n];
     list[n] = num;
