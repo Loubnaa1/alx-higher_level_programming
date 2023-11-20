@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  prints state objects from the database hbtn_0e_14_usa
+"""prints city objects from the database hbtn_0e_14_usa
 """
 from sys import argv
 from model_state import Base, State
