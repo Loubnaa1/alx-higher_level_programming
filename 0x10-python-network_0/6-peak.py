@@ -1,20 +1,36 @@
 #!/usr/bin/python3
-"""find_peak function script"""
+"""  python script Containing  find_peak function"""
+
 
 def find_peak(list_of_integers):
-    """Function to find a peak element in an unsorted list of integers."""
+    """ function that find a peak in a list of unsorted
+    integers """
 
-    a, b = 0, len(list_of_integers) - 1
-
-    if b == -1:
+    if len(list_of_integers) == 0:
         return None
 
+    for i in range(len(list_of_integers) - 1):
+        j = i
+        if i == 0 and list_of_integers[i] >= list_of_integers[i + 1]:
+            temp = list_of_integers[i]
+        if (i == 1 and
+        list_of_integers[i] >= list_of_integers[i + 1] and
+        list_of_integers[i] >= list_of_integers[i - 1]):
+            temp = list_of_integers[i]
+        if i > 1:
+            j = j + (i - 1)
+            if j > len(list_of_integers) - 1:
+                return temp
+            if (j == len(list_of_integers) - 1 and
+            list_of_integers[j] >= list_of_integers[j - 1]):
+                temp = list_of_integers[j]
+            if (j == len(list_of_integers) - 1 and
+            list_of_integers[j] <= list_of_integers[j - 1]):
+                temp = list_of_integers[j - 1]
+            if (j < len(list_of_integers) - 1 and
+            j != len(list_of_integers) - 1):
+                if (list_of_integers[j] >= list_of_integers[j + 1] and
+                list_of_integers[j] >= list_of_integers[j - 1]):
+                    temp = list_of_integers[j]
 
-    while a < b:
-        tmp = (a + b) // 2
-        if list_of_integers[tmp] < list_of_integers[tmp + 1]:
-            a = tmp + 1
-        else:
-            b = tmp
-
-    return list_of_integers[a]
+    return temp
