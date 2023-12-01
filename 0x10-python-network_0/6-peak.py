@@ -2,7 +2,7 @@
 """find_peak function script"""
 
 def find_peak(list_of_integers):
-    """Function to find a peak element in an unsorted list of integers."""
+    """Function to find a peak element in an unsorted list."""
 
     a, b = 0, len(list_of_integers) - 1
 
