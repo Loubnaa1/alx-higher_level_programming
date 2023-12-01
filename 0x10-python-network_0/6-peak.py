@@ -4,10 +4,11 @@
 def find_peak(list_of_integers):
     """Function to find a peak element in an unsorted list of integers."""
 
+    if not list_of_integers:
+        return None
+
     a, b = 0, len(list_of_integers) - 1
 
-    if b == -1:
-        return None
 
     while a < b:
         tmp = (a + b) // 2
