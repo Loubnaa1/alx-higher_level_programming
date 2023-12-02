@@ -4,7 +4,8 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2], sys.argv[1])
+    url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2], 
+sys.argv[1])
     request = requests.get(url)
     commits = request.json()
     try:
