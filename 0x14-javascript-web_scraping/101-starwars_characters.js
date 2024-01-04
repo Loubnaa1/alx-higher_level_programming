@@ -4,17 +4,17 @@ const url = 'https://swapi-api.hbtn.io/api/films/';
 request(url + process.argv[2], (error, response, body) => {
   if (error) console.error(error);
   else {
-    const results = JSON.parse(body).characters;
-    printresult(results, 0);
+    const caracters = JSON.parse(body).characters;
+    printcaract(caracters, 0);
   }
 });
-function printresult (results, i) {
-  request(results[i], (error, response, body) => {
+function printcaract (caracters, index) {
+  request(caracters[index], (error, response, body) => {
     if (error) console.error(error);
     else {
       console.log(JSON.parse(body).name);
-      if (i + 1 < results.length) {
-        printresult(results, i + 1);
+      if (index + 1 < caracters.length) {
+        printcaract(caracters, index + 1);
       }
     }
   });
