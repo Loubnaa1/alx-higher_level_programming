@@ -9,7 +9,7 @@ request(process.argv[2], (error, response, body) => {
       for (let character of object.characters) {
         if (character.endsWith('/18/')) {
           count++;
-          break; // Exit the inner loop once a matching character is found
+          break;
         }
       }
     }
