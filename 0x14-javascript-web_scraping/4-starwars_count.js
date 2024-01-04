@@ -1,20 +1,22 @@
 #!/usr/bin/node
 const request = require('request');
-let count = 0;
+
 request(process.argv[2], (error, response, body) => {
-  if (error) console.error(error);
-  else {
+  let count = 0;
+
+  if (error) {
+    console.error(error);
+  } else {
     const results = JSON.parse(body).results;
-    for (let object of results) {
-      for (let character of object.characters) {
-        if (character.includes('18')){
+
+    for (let i = 0; i < results.length; i++) {
+      for (let j = 0; j < results[i].characters.length; j++) {
+        if (results[i].characters[j].includes('18')) {
           count++;
-          break;
         }
       }
     }
-
-    console.log(count);
   }
-});
 
+  console.log(count);
+});
