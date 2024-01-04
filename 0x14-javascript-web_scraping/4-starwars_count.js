@@ -5,8 +5,16 @@ request(process.argv[2], (error, response, body) => {
   if (error) console.error(error);
   else {
     const results = JSON.parse(body).results;
-    console.log(results.filter(object => object.characters.some(character => character.endsWith('/18/'))
-  ).length);
+    for (let object of results) {
+      for (let character of object.characters) {
+        if (character.endsWith('/18/')) {
+          count++;
+          break; // Exit the inner loop once a matching character is found
+        }
+      }
+    }
+
+    console.log(count);
   }
-  console.log(count);
 });
+
