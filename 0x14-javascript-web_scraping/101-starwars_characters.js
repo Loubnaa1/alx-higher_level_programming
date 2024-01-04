@@ -2,9 +2,7 @@
 const request = require('request');
 const url = 'https://swapi-api.hbtn.io/api/films/';
 request(url + process.argv[2], (error, response, body) => {
-  if (error) {
-	  console.error('Error:', error);
-	  }
+  if (error) console.error('Error:', error);
   else {
     const caracters = JSON.parse(body).characters;
     printcaract(caracters, 0);
@@ -12,9 +10,7 @@ request(url + process.argv[2], (error, response, body) => {
 });
 function printcaract (caracters, index) {
   request(caracters[index], (error, response, body) => {
-    if (error) {
-	    console.error(error);
-	    }
+    if (error) console.error(error);
     else {
       console.log(JSON.parse(body).name);
       if (index + 1 < caracters.length) {
